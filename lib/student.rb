@@ -9,13 +9,8 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    
     students_array.each do |student|
-      if !@@all.include?(student)
-        @@all << @name = student[:name]
-        @@all << @location = student[:location]
-        # @@all << student
-        binding.pry 
+      self.new(student)
       end 
     end 
     
