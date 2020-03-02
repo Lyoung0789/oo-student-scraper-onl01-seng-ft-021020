@@ -19,7 +19,7 @@ class Scraper
       student[:location] = index.css("p.student-location").text
       student[:profile_url] = index.css("a").attribute("href").value
       @all << student
-      binding.pry
+      # binding.pry
       
     end 
     @all
