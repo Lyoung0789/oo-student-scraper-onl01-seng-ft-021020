@@ -40,9 +40,8 @@ class Scraper
       else index.attribute("href").value.include?("blog")
         links[:blog] = index.attribute("href").value
         
-      end 
+       end 
       
-      binding.pry
   
     end 
     
