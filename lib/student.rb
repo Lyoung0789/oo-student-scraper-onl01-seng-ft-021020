@@ -13,9 +13,10 @@ class Student
     students_array.each do |student|
       if !@new_array.include?(student[:name])
       @new_array << student[:name]
+      end 
     end 
-    end 
-    binding.pry 
+    @new_array
+    
     
   end
 
