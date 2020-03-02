@@ -13,7 +13,7 @@ class Student
     students_array.each do |student|
       if !@@all.include?(student)
       @@all << student
-      binding.pry 
+      
       end 
     end 
     @@all
