@@ -36,7 +36,19 @@ class Scraper
         links[:twitter] = index.attribute("href").value
       end 
       
-      links[:linkedin] = index.attribute("href").value
+      if index.attribute("href").value.include?("linkedin")
+        links[:linkedin] = index.attribute("href").value
+      end 
+      
+      if index.attribute("href").value.include?("github")
+        links[:github] = index.attribute("href").value
+      end 
+      
+      if index.attribute("href").value.include?("blog")
+        links[:blog] = index.attribute("href").value
+      end 
+      
+    
       # links[:github] = 
       # links[]
       binding.pry
