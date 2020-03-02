@@ -14,7 +14,7 @@ class Scraper
     
     doc.each do |post|
       user = Scraper.new 
-      user.name = post.css("h4.")
+      user.name = post.css("h4.student-name")
     
   end
 
