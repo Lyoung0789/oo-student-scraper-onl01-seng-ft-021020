@@ -12,7 +12,7 @@ class Student
     
     students_array.each do |student|
       if !@@all.include?(student[:name])
-      @@all << student[:name]
+      @@all << student
       end 
     end 
     @@all
