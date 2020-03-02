@@ -31,7 +31,7 @@ class Scraper
     social = doc.css("div.vitals-container .social-icon-container a")
     social.each do |index|
       links[:twitter] = index.attribute("href").text
-      links[:linkedin] =
+      links[:linkedin] = index.attribute("href").text
       links[:github] = 
       links[]
       binding.pry
