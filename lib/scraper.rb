@@ -4,7 +4,7 @@ require 'nokogiri'
 
 class Scraper
   @@all = []
-  attr_accessor :name, :location, :profile
+  
   
   def self.scrape_index_page(index_url)
     html = open(index_url)
@@ -13,10 +13,11 @@ class Scraper
     # doc.css("div.student-card")
     
     doc.css("div.student-card").each do |index|
-      binding.pry
+      
       student = {}
-      student.name = index.css("h4.student-name").text
-      student.location = index.css("p.student-location")
+      student[:name] = index.css("h4.student-name").text
+      student[:location] = index.css("p.student-location")
+      student[:profile] = index.css("a").attribute("href").value
       binding.pry 
     end 
     
