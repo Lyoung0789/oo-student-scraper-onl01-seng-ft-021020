@@ -3,7 +3,7 @@ require 'pry'
 require 'nokogiri'
 
 class Scraper
-  @@all = []
+  
   
   
   def self.scrape_index_page(index_url)
@@ -18,6 +18,7 @@ class Scraper
       student[:name] = index.css("h4.student-name").text
       student[:location] = index.css("p.student-location")
       student[:profile] = index.css("a").attribute("href").value
+      @all << student
       
     end 
     
