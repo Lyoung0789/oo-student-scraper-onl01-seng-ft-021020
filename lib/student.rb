@@ -12,8 +12,9 @@ class Student
     
     students_array.each do |student|
       if !@@all.include?(student)
-      @@all << student
-      
+        @name = student[:name]
+        @location = student[:location]
+        @@all << student
       end 
     end 
     
