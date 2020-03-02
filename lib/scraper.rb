@@ -30,8 +30,8 @@ class Scraper
     doc = Nokogiri::HTML(html)
     social = doc.css("div.vitals-container .social-icon-container a")
     social.each do |index|
-      links[:twitter] = index.attribute("href").text
-      links[:linkedin] = index.attribute("href").text
+      links[:twitter] = index.attribute("href").value
+      links[:linkedin] = index.attribute("href").value
       links[:github] = 
       links[]
       binding.pry
