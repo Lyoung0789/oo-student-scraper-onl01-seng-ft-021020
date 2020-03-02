@@ -25,10 +25,11 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
+    links={}
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     doc.css("div.vitals-container").each do |index|
-      
+      if 
     end 
     binding.pry
     
