@@ -10,6 +10,7 @@ class Scraper
     html = open(index_url)
     doc = Nokogiri::HTML(html)
     # binding.pry
+    self.get_pages.css(".post")
     
   end
 
