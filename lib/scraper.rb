@@ -28,49 +28,49 @@ class Scraper
     student_profile={}
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-    # social = doc.css("div.vitals-container .social-icon-container a")
-    # social.each do |index|
-    # # doc.css("div.main-wrapper.profile div.vitals-container .social-icon-container a").each do |social|
-    #   if index.attribute("href").value.include?("twitter")
-    #     links[:twitter] = index.attribute("href").value
+    social = doc.css("div.vitals-container .social-icon-container a")
+    social.each do |index|
+    # doc.css("div.main-wrapper.profile div.vitals-container .social-icon-container a").each do |social|
+      if index.attribute("href").value.include?("twitter")
+        links[:twitter] = index.attribute("href").value
       
       
-    #   elsif index.attribute("href").value.include?("linkedin")
-    #     links[:linkedin] = index.attribute("href").value
+      elsif index.attribute("href").value.include?("linkedin")
+        links[:linkedin] = index.attribute("href").value
       
       
-    #   elsif index.attribute("href").value.include?("github")
-    #     links[:github] = index.attribute("href").value
+      elsif index.attribute("href").value.include?("github")
+        links[:github] = index.attribute("href").value
       
       
-    #   else index.attribute("href").value.include?("blog")
-    #     links[:blog] = index.attribute("href").value
+      else index.attribute("href").value.include?("blog")
+        links[:blog] = index.attribute("href").value
         
-    #   end 
+      end 
       
     
-    #   # links[:github] = 
-    #   # links[]
-    #   binding.pry
+      # links[:github] = 
+      # links[]
+      binding.pry
   
-    # end 
+    end 
     
     
     
-    # binding.pry
-    doc.css("div.vitals-container .social-icon-container a").each do |social|
-      if social.attribute("href").value.include?("twitter")
-        student_profile[:twitter] = social.attribute("href").value
-      elsif social.attribute("href").value.include?("linkedin")
-        student_profile[:linkedin] = social.attribute("href").value
-      elsif social.attribute("href").value.include?("github")
-        student_profile[:github] = social.attribute("href").value
-      else
-        student_profile[:blog] = social.attribute("href").value
-      end
-      # binding.pry 
-    end
     binding.pry
+    # doc.css("div.vitals-container .social-icon-container a").each do |social|
+    #   if social.attribute("href").value.include?("twitter")
+    #     student_profile[:twitter] = social.attribute("href").value
+    #   elsif social.attribute("href").value.include?("linkedin")
+    #     student_profile[:linkedin] = social.attribute("href").value
+    #   elsif social.attribute("href").value.include?("github")
+    #     student_profile[:github] = social.attribute("href").value
+    #   else
+    #     student_profile[:blog] = social.attribute("href").value
+    #   end
+    #   # binding.pry 
+    # end
+    # binding.pry
     
   end
 
