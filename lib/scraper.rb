@@ -19,6 +19,7 @@ class Scraper
       student[:location] = index.css("p.student-location")
       student[:profile] = index.css("a").attribute("href").value
       @all << student
+      binding.pry
       
     end 
     
