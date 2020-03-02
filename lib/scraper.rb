@@ -22,6 +22,7 @@ class Scraper
       binding.pry
       
     end 
+    @all
     binding.pry
   end
 
