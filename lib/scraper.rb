@@ -32,6 +32,7 @@ class Scraper
     social.each do |index|
       # binding.pry
     
+      if index.attribute("href").value.include
       links[:twitter] = index.attribute("href").value
       links[:linkedin] = index.attribute("href").value
       # links[:github] = 
