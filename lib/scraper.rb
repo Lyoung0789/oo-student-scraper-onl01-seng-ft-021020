@@ -13,6 +13,7 @@ class Scraper
     # self.get_pages.css(".post")
     
     doc.each do |post|
+      binding.pry
       user = Scraper.new 
       user.name = post.css("h4.student-name").text
       binding.pry 
