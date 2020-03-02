@@ -16,7 +16,7 @@ class Scraper
       binding.pry
       student = {}
       student.name = index.css("h4.student-name").text
-      student.location = index.css()
+      student.location = index.css("p.student-location")
       binding.pry 
     end 
     
