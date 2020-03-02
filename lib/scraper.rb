@@ -35,7 +35,7 @@ class Scraper
       links[:twitter] = index.attribute("href").value
       links[:linkedin] = index.attribute("href").value
       # links[:github] = 
-      links[]
+      # links[]
       binding.pry
   
     end 
