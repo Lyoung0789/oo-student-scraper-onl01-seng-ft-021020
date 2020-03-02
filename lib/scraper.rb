@@ -34,7 +34,7 @@ class Scraper
     
       if index.attribute("href").value.include?("twitter")
         links[:twitter] = index.attribute("href").value
-      end 
+      
       
       elsif index.attribute("href").value.include?("linkedin")
         links[:linkedin] = index.attribute("href").value
