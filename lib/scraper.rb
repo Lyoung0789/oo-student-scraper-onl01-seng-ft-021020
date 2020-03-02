@@ -9,9 +9,7 @@ class Scraper
   def self.scrape_index_page(index_url)
     html = open(index_url)
     doc = Nokogiri::HTML(html)
-    # binding.pry
-    # self.get_pages.css(".post")
-    # binding.pry
+    
     doc.css("div.student-card")
     
     doc.css("div.student-card").each do |post|
