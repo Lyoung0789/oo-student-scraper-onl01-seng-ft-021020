@@ -14,7 +14,7 @@ class Scraper
     # binding.pry
     doc.css(".roster-cards-contatiner")
     
-    doc.each do |post|
+    doc.css(".roster-cards-contatiner").each do |post|
       binding.pry
       user = Scraper.new 
       user.name = post.css("h4.student-name").text
