@@ -9,13 +9,13 @@ class Student
   end
 
   def self.create_from_collection(students_array)
-    @new_array=[]
+    
     students_array.each do |student|
-      if !@new_array.include?(student[:name])
-      @new_array << student[:name]
+      if !@@all.include?(student[:name])
+      @@all << student[:name]
       end 
     end 
-    @new_array
+    @@all
     
     
   end
