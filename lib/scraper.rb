@@ -42,7 +42,7 @@ class Scraper
        end 
     end 
     
-    links[:profile_quote] = doc.css("div.vitals-container .vitals-text-container div.profile-quote")
+    links[:profile_quote] = doc.css("div.vitals-container .vitals-text-container div.profile-quote").text
     
     
     binding.pry
