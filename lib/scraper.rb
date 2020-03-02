@@ -28,11 +28,15 @@ class Scraper
     links={}
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-    social = doc.css("div.vitals-container")
-    binding.pry
-    links[:twitter] = social.css("a").attribute("href").value
-    links[:linkedin]= social.css("a").attribute("href").value 
-    links[:github] = social.css("a").attribute("href").value
+    social = doc.css("div.vitals-container .social-icon-container a")
+    social.each do |index|
+      
+      
+      binding.pry
+      links[:twitter] = social.css("a").attribute("href").value
+      links[:linkedin]= social.css("a").attribute("href").value 
+      links[:github] = social.css("a").attribute("href").value
+    end 
     
     binding.pry
     
