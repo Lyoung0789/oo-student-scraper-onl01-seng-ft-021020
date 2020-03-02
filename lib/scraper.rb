@@ -58,7 +58,7 @@ class Scraper
     
     
     # binding.pry
-    doc.css("div.main-wrapper.profile .social-icon-container a").each do |social|
+    doc.css("div.vitals-container .social-icon-container a").each do |social|
       if social.attribute("href").value.include?("twitter")
         student_profile[:twitter] = social.attribute("href").value
       elsif social.attribute("href").value.include?("linkedin")
