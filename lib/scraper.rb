@@ -12,7 +12,7 @@ class Scraper
     # binding.pry
     # self.get_pages.css(".post")
     # binding.pry
-    doc.css(".post")
+    doc.css(".roster-cards-contatiner")
     doc.each do |post|
       binding.pry
       user = Scraper.new 
