@@ -42,7 +42,7 @@ class Scraper
        end 
     end 
     
-    doc.css("div.vitals-container .")
+    doc.css("div.vitals-container .vitals-text-container div.profile-quote")
     
     
     binding.pry
