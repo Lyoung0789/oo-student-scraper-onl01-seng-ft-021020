@@ -14,8 +14,9 @@ class Scraper
     
     doc.css("div.student-card").each do |index|
       binding.pry
-      student = Scraper.new 
+      student = {}
       student.name = index.css("h4.student-name").text
+      student.location = index.css()
       binding.pry 
     end 
     
