@@ -13,6 +13,7 @@ class Student
     students_array.each do |student|
       @new_array << student[:name]
     end 
+    binding.pry 
     
   end
 
