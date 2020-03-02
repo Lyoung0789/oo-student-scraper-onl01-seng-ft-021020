@@ -47,6 +47,7 @@ class Scraper
     links[:bio] = doc.css(".details-container .bio-block .bio-content .description-holder p").text
     
     # binding.pry
+    links
   end
 end
 
