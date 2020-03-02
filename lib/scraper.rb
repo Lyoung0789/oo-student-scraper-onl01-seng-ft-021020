@@ -45,7 +45,7 @@ class Scraper
     links[:profile_quote] = doc.css("div.vitals-container .vitals-text-container div.profile-quote").text
     
     links[:bio] = doc.css(".details-container .bio-block .bio-content .description-holder p").text
-    # links[:bio] = biography.css("p").text
+    
     
     links
     # binding.pry
