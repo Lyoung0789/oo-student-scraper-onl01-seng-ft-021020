@@ -11,7 +11,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     # binding.pry
     # self.get_pages.css(".post")
-    
+    binding.pry
     doc.each do |post|
       binding.pry
       user = Scraper.new 
