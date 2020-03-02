@@ -68,6 +68,7 @@ class Scraper
       else
         student_profile[:blog] = social.attribute("href").value
       end
+      binding.pry 
     end
     binding.pry
     
